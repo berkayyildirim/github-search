@@ -22,6 +22,9 @@ const Search = () => {
         return (
             <div>
                 <form onSubmit={onSubmit} className="form">
+                    <h2>
+                        <i class="fas fa-search"></i> Search github user
+                    </h2>
                     <input 
                     type="text" 
                     name="text" 
@@ -31,12 +34,14 @@ const Search = () => {
                     />
                     <input 
                         type="submit" 
-                        value="search" 
-                        className="btn btn-dark btn-block" />
+                        value="Search" 
+                        // className="all-center-search" />
+                        className="btn btn-light btn-block" />
                 </form>
                 {githubContext.users.length > 0 && (
                     <button 
-                        className="btn btn-light btn-block" 
+                        className="btn btn-dark btn-block" 
+                        // className="all-center-clear"
                         onClick={ githubContext.clearUsers}
                     >
                         Clear
